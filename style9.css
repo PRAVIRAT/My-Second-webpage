@@ -1,0 +1,233 @@
+html{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: clamp(1.5rem,1.5rem,2vh);
+    scroll-behavior: smooth;
+}
+
+body{
+    border: 7px double black;
+    margin: 1rem;
+    padding: 1rem;
+    background-image: radial-gradient( whitesmoke,darkseagreen);
+}
+
+h1{
+    font-size: 42px;
+    background-color: mediumslateblue;
+    border: 4px ridge black;
+    outline: 4px double black;
+    outline-offset: 1px;
+    width: 90%;
+    padding: 1rem 0.3rem 1rem 2rem;
+    margin-left: 1rem;
+}
+
+nav ul{
+    text-align: center;
+}
+
+nav a{
+    text-decoration: none;
+    background-color: darkmagenta;
+    color: blanchedalmond;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+nav a:hover,a:focus{
+    color: black;
+    border-bottom: 5px double black;
+}
+
+h2{
+    background-color: mediumaquamarine;
+    color: azure;
+    border: 4px dashed black;
+    width: 20%;
+    padding: 1rem 0.3rem 1rem 1rem;
+    margin-left: 12em;
+}
+
+marquee{
+    width: 50%;
+    background-color: deepskyblue;
+}
+
+dd{
+    text-align: center;
+}
+
+h3{
+    background-color: darkgoldenrod;
+    color: azure;
+    border: 4px groove black;
+    outline: 4px double black;
+    outline-offset: -10px;
+    padding: 1rem 0.3rem 1rem 1rem;
+    width: 30%;
+    margin-left: 13em;
+}
+
+ol{
+    text-align:  center;
+    list-style-position: inside;
+    list-style-type: georgian;
+}
+
+ol li:first-child{
+      color: blue;
+}
+
+.fitness{
+    background-color: darkolivegreen;
+    color: lightcyan;
+    border:7px solid black;
+    height: 60vh;
+}
+
+.fitness li{
+    font-size: 32px;
+    list-style-position: inside;
+    text-align: center;
+    list-style-type: lower-roman;
+}
+
+.fitness img{
+    float: left;
+}
+
+.favourite li{
+    list-style-type: none;
+}
+
+.favourite{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 26px;
+    column-gap: 3rem;
+    column-count: 4;
+    column-rule: 5px groove black;
+}
+
+.favourite .span{
+    column-span: all;
+    border: 5px dotted darkorchid;
+    color: orchid;
+    width: 80%;
+    margin-left: 3em;
+    text-align: center;
+}
+
+.imagestyle{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2em;
+    background-image: url(Images/Tom\ and\ Jerry\ .jpg);
+    background-size: contain;
+}
+
+.imagestyle img{
+    border: 5px ridge dimgray;
+    border-radius: 50%;
+    width: 30%;
+}
+
+figcaption{
+    font-size: 36px;
+    background-color: rgba(0, 0, 0, 0.229);
+    border-radius: 15px;
+    color: yellow;
+    text-shadow: 11px 7px 15px black;
+}
+
+.grid{
+    height: 75vh;
+    display: grid;
+    grid-template-columns: 150px 150px 200px;
+    grid-auto-rows: 100px;
+    gap: 1em 1em;
+    align-content: center;
+}
+
+.box{
+    display: grid;
+    place-content: center;
+}
+
+.box:first-child{
+    background-color: lightskyblue;
+    color: black;
+    font-weight: bolder;
+    transform: skewX(-20deg);
+}
+
+.box:nth-child(2){
+    background-color: lightgreen;
+    color: black;
+    font-weight: bolder;
+    transform: skewY(10deg);
+}
+
+.box:last-child{
+    background-color: black;
+    color: yellow;
+    font-weight: bolder;
+    transition: all;
+    animation: slide 7s 0.5s 5 forwards ease-in-out;
+}
+
+@keyframes slide {
+    0%{
+        transform: translateX(0);
+    }
+
+    10%{
+        transform: translateX(200px) rotate(180deg) ;
+    }
+
+    50%{
+        transform: translateY(150px) rotate(-150deg);
+    }
+    
+    75%{
+        transform: translateY(-150px) rotate(200deg);
+    }
+
+    100%{
+        transform: translate(0) skew(-20deg, 10deg);
+    }
+}
+
+@media (prefers-color-scheme:dark){
+    body{
+        background-image: linear-gradient(to left,whitesmoke,red);
+    }
+}
+
+
+
+footer{
+    text-align: center;
+}
+
+/* footer p{
+    position: fixed;
+    padding-left: 20em;
+    bottom: 0;
+} */
+
+p a{
+    text-decoration: none;
+    color: chartreuse;
+    background-color: rgba(0, 0, 0, 0.579);
+    border: 2px solid rgba(0, 0, 0, 0.579);
+    border-radius: 15px;
+}
+
+table,tr,td,caption{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 1rem;
+}
